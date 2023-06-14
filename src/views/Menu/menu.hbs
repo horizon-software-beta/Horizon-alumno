@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#bla"  />
+    <!--Link para conectarnos con los estilos de Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"  integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+
+  </head>
+
+<!--Abrimos una etiqueta Style para crear nuestros estilos para el menu-->
+<style>
+/*Modifica todo el cuerpo de la pagina*/
+body{
+  /*Color de fondo*/
+  background-color: #dcdada;
+}
+
+.description{
+  /*Altura*/
+  height: 25px;
+  /*Oculta la descripción en caso de aver mucho texto*/
+  overflow: hidden;
+  /*Transicion para mostrar toda la descripcion del producto*/
+  transition: height .3s ease-in .3s;
+}
+
+.description:hover{
+  /*Altura*/
+  height: 80px;
+}
+
+</style>
+
+  <body>
+    <!--Contenedor donde estaran todas nuestras cartas para el menu-->
+    <div class="tab-content" id="pills-tabContent">
+      <!--Agrupa nuestras cartas de menu con un pequeño espacio entre ellas -->
+      <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <!--Titulo-->
+        <center><h2 class="h4 m-4 text-dark">Menu</h2></center>
+        <!--Contenedor para nuestra caja que sera para una carta del menu-->
+        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+          <div>
+            <!--Caja de nuestra carta-->
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <!--Nombre de nuestro producto-->
+              <h5 class="card-title pt-2 text-center text-dark">Torta</h5>
+              <!--Imagen-->
+              <img src="https://editorialtelevisa.brightspotcdn.com/dims4/default/e157225/2147483647/strip/true/crop/995x560+3+0/resize/1000x563!/quality/90/?url=https%3A%2F%2Fk2-prod-editorial-televisa.s3.amazonaws.com%2Fbrightspot%2Fwp-content%2Fuploads%2F2019%2F11%2Fhistoria-tortas.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <!--Descripción de nuestro producto-->
+                <p class="card-text text-dark description">Bisteck, Chorizo y jamon</p>
+                <!--Precio-->
+                <h5 class="text-danger">Precio: <span class="precio">$ 35</span></h5>
+                <div class="d-grid gap-2">
+                  <!--Boton para agregar al carrito-->
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Tortas de guisado</h5>
+              <img src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/recetas-de-tortas-mexicanas-guacamaya.jpg">
+              <div class="card-body">
+                <p class="card-text text-dark description">Huevo, salchicha, frijoles y desebrada</p>
+                <h5 class="text-danger">Precio: <span class="precio">$ 25</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Flautas</h5>
+              <img src="https://editorialtelevisa.brightspotcdn.com/wp-content/uploads/2020/06/flautas-de-pollo-con-salsa-de-aguacate.jpg">
+              <div class="card-body">
+                <p class="card-text text-dark description">Orden de flautas con una salsa un poco picosa</p>
+                <h5 class="text-danger">Precio: <span class="precio">$ 35</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Sopes</h5>
+              <img src="https://www.goya.com/media/7924/sopes.jpg?quality=80" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description">Hay de desebrada pero tambien puedes agregarle guisados</p>
+                <h5 class="text-danger">Precio: <span class="precio">$ 20</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+           <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Burritos</h5>
+              <img src="https://i.blogs.es/5ac783/como-hacer-burritos-de-carne-2-/1366_2000.jpg">
+              <div class="card-body">
+                <p class="card-text text-dark description">Ricos burritos de guisado o ya preparados </p>
+                <h5 class="text-danger">Precio: <span class="precio">$ 15</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Tacos de guisado</h5>
+              <img src="https://cdn7.kiwilimon.com/ss_secreto/2362/960x640/2362.jpg.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description">Ricos tacos de guisado la tortilla es tamaño mediano</p>
+                <h5 class="text-danger">Precio: <span class="precio">$10</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">hot dogs</h5>
+              <img src="https://images.hola.com/imagenes/cocina/noticiaslibros/20200424166483/dia-mundial-perrito-caliente-hot-dog/0-815-493/hotdogs-t.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description">Deliciosos hot dogs</p>
+                <h5 class="text-danger">Precio: <span class="precio">$ 15</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Hamburguesa</h5>
+              <img src="https://recetasdedon.com.mx/wp-content/uploads/2022/06/hamburguesas-historia-caracteristicas-preparacion-y-tipos-640x422.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description">Deliciosa hamburguesa a solo </p>
+                <h5 class="text-danger">Precio: <span class="precio">$ 35</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Sincronizada sencilla y doble</h5>
+              <img src="https://cdn7.kiwilimon.com/recetaimagen/21367/960x640/11427.jpg.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description">Deliciosa sincronizada a solo</p>
+                <h5 class="text-danger">Precio: <span class="precio">$ 27 y 35 la doble</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Onigiri</h5>
+              <img src="https://img-global.cpcdn.com/recipes/fe564cf38e1433f6/1200x630cq70/photo.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$ 35</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+           <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Fuze tea</h5>
+              <img src="https://farmaciasklyns.vtexassets.com/arquivos/ids/166106-800-450?v=637935263677330000&width=800&height=450&aspect=true" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description">Menu</p>
+                <h5 class="text-danger">Precio: <span class="precio">$ 20</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Frutsi</h5>
+              <img src="https://cdn.shopify.com/s/files/1/0372/4450/2149/products/BsCSP_1046x700.jpg?v=1658864077" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$10</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+           <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">jugo jumex </h5>
+              <img src="https://www.costco.com.mx/medias/sys_master/products/h48/hcf/135906326183966.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$20</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Jugo de naranja del valle</h5>
+              <img src="https://images.squarespace-cdn.com/content/v1/58597a19e58c62ba7fa48bf9/1504470330847-7JK5359F4KM5HDJI90XA/unnamed.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description">Menu</p>
+                <h5 class="text-danger">Precio: <span class="precio">$20</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">POWER</h5>
+              <img src="https://i5.walmartimages.com.mx/gr/images/product-images/img_large/00750105531765L1.jpg?odnHeight=612&odnWidth=612&odnBg=FFFFFF">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$22</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Agua natural ciel </h5>
+              <img src="https://i5.walmartimages.com.mx/gr/images/product-images/img_large/00750105531088L1.jpg">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$13</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Mazapan</h5>
+              <img src="https://cdn.foodandwineespanol.com/2021/04/mazapan.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$10</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Mazapan de ocolate</h5>
+              <img src="https://i5.walmartimages.com.mx/mg/gm/1p/images/product-images/img_large/00072486900487l.jpg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$7</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div><div class="col d-flex justify-content-center mb-4">
+
+
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Cacahuates</h5>
+              <img src="https://http2.mlstatic.com/D_NQ_NP_641281-MLM49426409010_032022-O.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$13</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Paletas bubalo</h5>
+              <img src="https://m.media-amazon.com/images/I/81U14sWVMAL.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$ 15</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Halls</h5>
+              <img src="https://m.media-amazon.com/images/I/31OoEmML8JL.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$ 10</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Picafresa</h5>
+              <img src="https://i5.walmartimages.com.mx/gr/images/product-images/img_large/00075968694342L.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$1</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Leche santa clara</h5>
+              <img src="https://i0.wp.com/tuminisuper.mx/wp-content/uploads/2020/09/LAC51.jpg?fit=600%2C600&ssl=1" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$ 13</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Galletas oreo</h5>
+              <img src="https://assets.lyreco.com/is/image/lyrecows/2018-8204895?$300px$&fmt=jpg&locale=SP_sp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$ 20</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Trikitrakes</h5>
+              <img src="https://superfenix.mx/wp-content/uploads/2022/06/7501000140855.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$ 18</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Chips ahoy</h5>
+              <img src="https://i5.walmartimages.com.mx/gr/images/product-images/img_large/00762230074472L.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$13</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Canelitas</h5>
+              <img src="https://cdn.shopify.com/s/files/1/0571/3788/9442/products/524.webp?v=1677116509" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$18</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-info rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Principe</h5>
+              <img src="https://http2.mlstatic.com/D_NQ_NP_797593-MLM52710424335_122022-O.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-dark description"></p>
+                <h5 class="text-danger">Precio: <span class="precio">$20</span></h5>
+                <div class="d-grid gap-2">
+                  <button  class="btn btn-warning button ">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/src/views/Menu/scripts.js"></script>
+  </body>
+</html>

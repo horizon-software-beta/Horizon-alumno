@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Titulo que llevara nuestra pagina-->
+    <title>Login Node.js MySql</title>
+
+    <!--Importacion de Tailwind CSS (Permite agregar codigo css para modificar el estilo de la pagina dentro de 
+    las etiquetas-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
+
+    <!--Importacion de Fontawesome CSS ( Ofrese una gran gama de iconos y ayuda a poder agregarlos a enlases, 
+    botones, formularios etc, tambien gracias al css podemos personalizar estos iconos) -->
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+
+  </head>
+  
+  <!--Estilos y cuerpo de la pagina-->
+  <body class="bg-white-100">
+
+    <!--Barra de nevegacion-->
+    <nav class="flex py-0 bg-blue-500 text-white px-18">
+
+      <center>
+        <!--Icono de nuestra pagina-->
+      <img class=" py-0 px-1" src="https://i.ibb.co/9ptL22J/Mi-proyecto.png" alt="gif" width="150" height="70" align="center">
+      </center>
+  
+      <div class="w-1/4 px-12 mr-auto">
+        <!--Titulo-->
+        <h1 class="text-3xl font-bold  py-12 px-0" >Cafeteria</h1>
+      </div>
+
+      <!--Lista desordenada --> 
+      <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
+
+      <!--Redireccion de nuestros botones los cuales nos apareceran una ves iniciemos session-->
+        {{#if name}}
+           
+           <!--Boton de home-->
+           <li align="center" class="nav-item px-1 py-10">
+            <a href="/" class="rounded-md bg-blue-200 w-full text-lg text-black font-semibold p-3 my-3 
+            hover:bg-blue-600 focus:bg-blue-700 hover:text-white  py-2.5 px-4">Home</a>
+           </li>
+          
+          <!--Boton de menu-->
+          <li class="nav-item px-1 py-10">
+          <a href="/menu" class="rounded-md bg-blue-200 w-full text-lg text-black font-semibold p-3 my-3 
+          hover:bg-blue-600 focus:bg-blue-700 hover:text-white  py-2.5 px-4">Menu</a>
+          </li>
+
+          <!--Boton para poder cerrar session-->
+          <li class="nav-item px-1 py-10">
+            <a href="/logout" class="rounded-md bg-blue-200 w-full text-lg text-black font-semibold p-3 my-3 hover:bg-blue-600 focus:bg-blue-700 hover:text-white py-2.5 px-4">Logout</a>
+          </li>
+
+          <!--Nombre del usuario-->
+          <li class="nav-item px-1 py-10">
+              <p><h1><font size="3"  style="color:rgb(253, 253, 253)" >{{name}}</font></h1></p>
+          </li>
+
+        {{else}} 
+
+          <!--En caso de iniciar sesion con un correo normal solo se le mostrara un boton al usuario-->
+          <li class="nav-item px-1 py-10">
+          <a href="/" class="rounded-md bg-blue-200 w-full text-lg text-black font-semibold p-3 my-3 
+          hover:bg-blue-600 focus:bg-blue-700 hover:text-white  py-2.5 px-4">Home</a>
+          </li>
+
+        {{/if}}
+      </ul>
+    </nav>
+    {{{body}}}
+  </body>
+</html>
