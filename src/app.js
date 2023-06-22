@@ -25,6 +25,7 @@ const config = {
 
 //Definición de las rutas de acceso a procesos 
 const loginRoutes = require('./routes/login');
+const { logout } = require('./controllers/LoginController');
 
 // creacion de la aplicación y asignación del puerto 
 const app = express();
@@ -50,11 +51,11 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 //define las credenciales de conección a la Base de datos 
 app.use(myconnection(mysql,{
-    host: 'localhost',
-    user: 'root',
-    password: '',
+    host: 'sql9.freesqldatabase.com',
+    user: 'sql9627372',
+    password: 'rwGsXKqydR',
     port: 3306,
-    database: 'sistema'
+    database: 'sql9627372'
 }, 'single'));
 
 //define los parametros para crear una sesión
@@ -88,7 +89,6 @@ app.use(auth(config));
 //middleware loginRoutes antes de pasar a cualquier middleware posterior.
 app.use('/',loginRoutes);
 
-
 //Este es método Express.js configura una ruta para la aplicación. 
 //Toma dos parámetros: el primer parámetro es la ruta de la ruta y 
 //el segundo parámetro es una función de devolución de llamada 
@@ -99,6 +99,12 @@ app.get('/', (req,res) => {
       //Imprime en la consola que esta auntenticado el usuario
       console.log("autenticado")
 
+//------------------------------------------------------------
+// req.isAuthenticated is provided from the auth router
+//app.get('/', (req, res) => {
+//    res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+// });
+//------------------------------------------------------------
      //Variable que contiene una expreccion regular para la comparacion y validacion de correos electronicos 
       var expresion = /[0-9]+@(cetis155)\.(edu.mx)$/;
       //Constante en la que se almacena el correo electronico del usuario auntenticado 
@@ -112,26 +118,15 @@ app.get('/', (req,res) => {
 
       //Si no, entonces redirigue al usuario a otra pagina donde le mostrara un mensage de error
       }else{
-       res.render("error", {message: "No se puede ingresar con un correo normal vuelva a iniciar sesion con un correo valido"});
+        res.redirect('/logout');
       }
       
     //Si no esta auntenticado el usuario entonces lo mandara al inicio de sesion 
     }else{
       console.log("NO autenticado");
       res.redirect('/login')
-
  }
-
-
 })
-
-//------------------------------------------------------------
-// req.isAuthenticated is provided from the auth router
-//app.get('/', (req, res) => {
-//    res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-// });
-//------------------------------------------------------------
-
 //inicia la ejecución de la aplicación en el puert 5000
 app.listen (app.get('port'), () =>{
     console.log('listening on port ', app.get('port'));
